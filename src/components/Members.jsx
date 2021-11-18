@@ -45,7 +45,7 @@ function TagsContainer({ tags }) {
     )
 }
 
-function Project({ title, description, imageUrl, tags, links, }) {
+function Member({ title, description, imageUrl, tags, links, }) {
     const styles = useStyles();
     return <Grid item>
         <Card className={styles.card}>
@@ -73,21 +73,19 @@ function Project({ title, description, imageUrl, tags, links, }) {
             <Hidden xsDown>
                 <CardMedia className={styles.cardMedia} image={imageUrl}></CardMedia>
             </Hidden>
-        </Card>
-    </Grid>
+        </Card></Grid>
 }
 
-export default function Projects() {
+export default function Members() {
     return (
-        <Container maxWidth="md" id="projects">
+        <Container maxWidth="md" id="members">
             <Box pt={8} mb={2}>
-                <Typography variant="h4">Projectos</Typography>
+                <Typography variant="h4">Nosotros</Typography>
             </Box>
             <Grid container direction="column" spacing={4}>
-                <img src="https://us.123rf.com/450wm/dzein/dzein1502/dzein150200002/36125549-construcci%C3%B3n-registrarte-fondo-blanco-ilustraci%C3%B3n-vectorial-3d-mesh.jpg?ver=6" alt="" />
-                {/* {projectsData.map((data, index) => (
-                    <Project key={index} {...data} />
-                ))} */}
+                {projectsData.map((data, index) => (
+                    <Member key={index} {...data} />
+                ))}
             </Grid>
         </Container>
     )

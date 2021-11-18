@@ -4,6 +4,7 @@ import { CssBaseline } from '@material-ui/core';
 import HeroSection from '../components/HeroSection'
 import Header from '../components/Header'
 import Projects from '../components/Projects';
+import Members from '../components/Members';
 
 let darkTheme = createTheme({
   palette: {
@@ -18,6 +19,7 @@ export default function indexPage() {
       <CssBaseline />
       <Header />
       <HeroSection />
+      <Members />
       <Projects />
     </ThemeProvider>
   )

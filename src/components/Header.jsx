@@ -13,11 +13,14 @@ import Divider from '@material-ui/core/Divider'
 import ChevronRightIcon from "@material-ui/icons/ChevronRight"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
+import Box from '@material-ui/core/Box'
+
 
 const navigationLinks = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "/resume.pdf" }
+    { name: "Qué hacemos", href: "#about" },
+    { name: "Nosotros", href: "#members" },
+    { name: "Proyectos", href: "#projects" }
+    // { name: "Resume", href: "/resume.pdf" }
 ]
 
 const useStyles = makeStyles(theme => (
@@ -34,7 +37,14 @@ const useStyles = makeStyles(theme => (
             border: "2px solid gray",
             borderLeft: "12px solid transparent",
             borderRight: "12px solid transparent"
-
+        },
+        box: {
+            height: 50,
+            marginRight: "auto",
+        },
+        logo: {
+            // height: "inherit",
+            width: 140
         }
     }
 ));
@@ -46,7 +56,9 @@ export default function Header() {
         <AppBar position="sticky" color="default">
             <Container maxWidth="md">
                 <Toolbar disableGutters>
-                    <Avatar className={styles.avatar}>P</Avatar>
+                    <Box className={styles.box}>
+                        <img className={styles.logo} src={"/logo7.png"} alt="" />
+                    </Box>
                     <Hidden xsDown>
                         {navigationLinks.map((item, index) => (
                             <Link

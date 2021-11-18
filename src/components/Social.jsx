@@ -2,6 +2,7 @@ import React from 'react'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import Grid from '@material-ui/core/Grid'
 import IconButton from '@material-ui/core/IconButton';
 import Link from '@material-ui/core/Link';
@@ -10,7 +11,8 @@ import Link from '@material-ui/core/Link';
 const socialItems = [
     { icon: GitHubIcon, url: "" },
     { icon: TwitterIcon, url: "" },
-    { icon: LinkedInIcon, url: "" }
+    { icon: LinkedInIcon, url: "" },
+    { icon: FacebookIcon, url: "" }
 ];
 
 
